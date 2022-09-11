@@ -1,18 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
- * main - Entry point
+ * main - main function
  *
- * Return: Always 0 (Success)
- **/
+ * Return: End the program
+ */
 
 int main(void)
-}
-	char Alphabet;
 
-	for (Alphabet = 'a'; Alphabet <= 'z'; Alphabet++)
-	putchar(Alphabet);
-	putchar('\n');
+{
+	char letter;
+	for (letter = 'a'; letter <= 'z'; ++letter)
+	printf("%c", letter);
+	printf("\n");
 	return (0);
+
 }
