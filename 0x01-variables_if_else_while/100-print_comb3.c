@@ -6,27 +6,29 @@
  */
 int main(void)
 {
-	int a, b;
+	int a = 0;
+	int b = 0;
+	int coma = 1;
 
-	for (a = 48; a < 58; a++)
+	while (a <= 9)
 	{
-		for (b = 48; b < 58; b++)
+		while (b <= 9)
 		{
-			if (a != b && b > a)
+			if (a < b)
 			{
-				putchar(a);
-				putchar(b);
-				if (b == 57 && a == 56}
+				if (coma == 0)
 				{
-				break
-					;
+					putchar(',');
+					putchar(32);
 				}
-				putchar(',');
-				putchar(' ');
+				coma = 0;
+				putchar(a + '0');
+				putchar(b + '0');
 			}
-
 		}
+		++a;
+		b = 0;
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
