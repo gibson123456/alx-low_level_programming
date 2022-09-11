@@ -7,6 +7,7 @@
  * Return: return one of the 3 options
  */
 int main(void)
+
 {
 	int n;
 	srand(time(0));
