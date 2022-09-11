@@ -12,7 +12,8 @@ int main(void)
 	int last_dig;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	last_dig = n % 10;
+	la0st_dig = n % 10;
+
 	if (last_dig > 5)
 	{
 
