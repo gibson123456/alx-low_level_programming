@@ -7,14 +7,16 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 
 {
 	char n;
 
-	for (n = 'z'; n >= 'a'; --n)
-		putchar(n);
+	for (f = '0'; f <= '9'; f++)
+
+		putchar(f);
+
 	putchar(10);
+
 	return (0);
 }
