@@ -1,44 +1,33 @@
 #include <stdio.h>
 /**
- * main - print triple combos
- *
- * Description: print triple digit combos
- *
- * Return: Always 0 (Success)
- */
+* main - print triple combos
+*
+* Description: print triple digit combos
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-	int a = 0;
-	int b = 0;
-	int c = 0;
-	int coma = 1;
-
-	while (a <= 9)
+	int i, j, k;
+	for (i = 48; i < 58; i++)
 	{
-		while (b <= 9)
+		for (j = 49; j < 58; j++)
 		{
-			while (c <= 9)
+			for (k = 50; k < 58; k++)
 			{
-				if (a < b && b < c)
+				if (k > j && j > i)
 				{
-					if (coma == 0)
-					{
-						putchar(',');
-						putchar(32);
-					}
-					coma = 0;
-					putchar(a + '0');
-					putchar(b + '0');
-					putchar(c + '0');
+				putchar(i);
+				putchar(j);
+				putchar(k);
+				if (i != 55 || j != 56)
+				{
+				putchar(',');
+				putchar(' ');
 				}
-				++c;
 			}
-			++b;
-			c = 0;
 		}
-		++c;	
-		b = 0;
-		}
-			putchar(10);
-			return (0);
+	}
+	putchar('\n');
+	return (0);
 }
