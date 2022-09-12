@@ -8,22 +8,37 @@
  */
 int main(void)
 {
-	int i, j, k;
-	
-	for (i = 48; i < 58; i++)
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int coma = 1;
+
+	while (a <= 9)
 	{
-		for (j = 49; j < 58; j++)
+		while (b <= 9)
 		{
-			for (k = 50; k < 58; k++)
+			while (c <= 9)
 			{
-				if (k > j && j > i)
+				if (a < b && b < c)
 				{
-				putchar(i);
-				putchar(j);
+					if (coma == 0)
+					{
+						putchar(',');
+						putchar(32);
+					}
+					coma = 0;
+					putchar(a + '0');
+					putchar(b + '0');
+					putchar(c + '0');
 				}
+				++c;
 			}
+			++b;
+			c = 0;
 		}
-	}
-	putchar('\n');
-	return (0);
+		++c;	
+		b = 0;
+		}
+			putchar(10);
+			return (0);
 }
