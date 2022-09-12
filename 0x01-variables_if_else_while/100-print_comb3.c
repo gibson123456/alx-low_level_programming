@@ -1,35 +1,34 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+*main - Entry point
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-	int a = 0;
-	int b = 0;
-	int coma = 1;
+	int a, b;
 
-	while (a <= 9)
+	for (a = 48; a < 58; a++)
 	{
-		while (b <= 9)
+		for (b = 48; b < 58; b++)
 		{
-			if (a < b)
+			if (a != b && b > a)
 			{
-				if (coma == 0)
+				putchar(a);
+				putchar(b);
+				if (b == 57 && a == 56)
 				{
-					putchar(',');
-					putchar(45);
+					break 
+						;
 				}
-				coma = 0;
-				putchar(a + '0');
-				putchar(b + '0');
+				putchar(',');
+				putchar(' ');
+
 			}
 		}
-		++a;
-		b = 0;
 	}
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }
