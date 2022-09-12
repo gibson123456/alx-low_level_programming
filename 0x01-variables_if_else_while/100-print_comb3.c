@@ -19,7 +19,7 @@ int main(void)
 				if (coma == 0)
 				{
 					putchar(',');
-					putchar(20);
+					putchar(32);
 				}
 				coma = 0;
 				putchar(a + '0');
@@ -30,5 +30,6 @@ int main(void)
 		b = 0;
 	}
 	putchar(10);
+
 	return (0);
 }
