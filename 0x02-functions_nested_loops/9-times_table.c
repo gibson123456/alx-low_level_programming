@@ -1,47 +1,37 @@
 #include "main.h"
 /**
- * times_table - prints the tables
+ * times_table - function to print times table
  *
- * Return: Always 0 (Success).
+ * Return: none - void function
  */
 void times_table(void)
 {
-	int a;
-	int b;
-	int c;
-	for (a = 0; a <= 9; a++)
+	int col = 0;
+	int row = 0;
+	int units = 0;
+	int tens = 0;
+	int n = 0;
+
+	while (row < 10)
 	{
-		for (b = 0; b <= 9; b++)
+		while (col < 10)
 		{
-			c = a * b;
-			if ((c / 10) == 0)
+			n = col * row;
+			units = n % 10;
+			tens = (n - units) / 10;
+			if (col > 0)
 			{
-				if (b == 0)
-				{
-					_putchar ('0');
-				}
-				if (b != 0)
-				{
-					_putchar(' ');
-					_putchar((c % 10) + '0');
-				}
-				{
-				if (b < 9)
-					_putchar(',');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar ((c / 10) + '0');
-					_putchar ((c % 10) + '0');
-					if (b < 9)
-					{
-						_putchar(',');
-						_putchar(',');
-					}
-				}
-			
+				_putchar(' ');
+				(tens <= 0) ? _putchar(' ') : _putchar(tens + '0');
 			}
-			_putchar ('\n');
+			_putchar(units + '0');
+			if (col < 9)
+			_putchar(44);
+			col++;
+
 		}
+		col = 0;
+		row++;
+		_putchar(10);
+	}
 }
