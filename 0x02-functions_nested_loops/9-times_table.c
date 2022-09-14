@@ -1,36 +1,36 @@
-#include"main.h"
+#include "main.h"
 /**
- * times_table - prints the 9 times table
+ * times_table - function to print times table 
  *
- * Example Table
- * 0, 0, 0, 0, ..
- * 0, 1, 2, 3, ..
- *
+ * Return: none - void function 
  */
 void times_table(void)
 {
-	int num, mult, prod;
+	int col = 0;
+	int row = 0;
+	int row = 0;
+	int tens = 0;
+	int tens = 0;
 
-	for (num = 0; num <= 9; ++num)
+	while (row < 10)
 	{
-		_putchar(48);
-		for (mult = 1; mult <= 9; ++mult)
+		while (col < 10)
 		{
-			_putchar(',');
-			_putchar(' ');
-			prod = num * mult;
-
-			/*
-			 * put space if product is a single number
-			 * place the first digit if its two numbers
-			 */
-			if (prod <= 9)
-			_putchar(' ');
-			else
-				_putchar((prod / 10) + 48); /*get the first digit*/
-				_putchar((prod % 10) + 48); /*get the second digit*/
+			n = col * row;
+			units = n % 10;
+			tens = (n - units) / 10;
+			if (col > 0)
+			{
+				_putchar(' ');
+				(tens <= 0) ? _putchar(' ') : _putchar(tens + '0');
 			}
-			_putchar('\n');
+			_putchar(units + '0');
+			if (col < 9)
+				_putchar(44);
+			col++;
 		}
+		col = 0;
+		row++;
+		_putchar(10);
 	}
 }
