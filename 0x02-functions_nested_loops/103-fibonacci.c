@@ -1,28 +1,26 @@
 #include <stdio.h>
 /**
- * main - prints fibonacci numbers starting from 1
- * Return: On successs (0)
+ * main - Entry point
+ *
+ * Return: end program
  */
 int main(void)
 {
-	int sum = 0;
-	int a;
-	int b;
-	int second = 1;
+	int i = 1;
+	long int  num1 = 0;
+	long int num2 = 1;
+	long int sumPrevTwo = 0;
+	long int sumEven = 0;
+	long int maxFibTerm = 4000000;
 
-	int second = 1;
-
-	a = 1;
-	b = 1;
-
-	while (b < 4000000)
+	while (num1 < maxFibTerm && num2 < maxFibTerm)
 	{
-		second = a + b;
-		a = b;
-		b = second;
-		if ((second <= 4000000) && (second % 2 == 0))
-		sum += second;
+		sumPrevTwo = num1 + num2;
+		sumEven += (((sumPrevTwo % 2) == 0) ? sumPrevTwo : 0);
+		num1 = num2;
+		num2 = sumPrevTwo;
+		i++;
 	}
-	printf("%d\n", sum);
+	printf("%ld\n", sumEven);
 	return (0);
 }
