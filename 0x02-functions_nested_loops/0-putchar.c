@@ -4,7 +4,7 @@
  *
  * Return: End program
  */
-int main(void);
+int main(void)
 {
 	char string[8] = "_putchar";
 	int n = 0;
